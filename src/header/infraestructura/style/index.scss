@@ -1,0 +1,57 @@
+@import '../../../infraestructura/theme/colors.scss';
+
+div.header {
+  div.container-header {
+    background-color: $color-third;
+    padding: 150px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+
+    .header-left {
+      p {
+        color: $color-second;
+        font-size: 32px;
+        font-weight: 500;
+      }
+      h1 {
+        color: $color-fourth;
+        letter-spacing: 3px;
+        width: 460px;
+        font-size: 60px;
+      }
+      small {
+        font-size: 22px;
+      }
+      button.btn-first {
+        background-color: $color-second;
+        width: 250px;
+        height: 60px;
+        border-radius: 40px;
+        margin-top: 30px;
+        font-size: 21px;
+        text-transform: capitalize;
+        font-weight: 300;
+      }
+    }
+    .header-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+      }
+    }
+  }
+  div.arrow-slider {
+    margin-top: -30px;
+    button {
+      background-color: $color-first !important;
+      box-shadow: none;
+      margin-left: 10px;
+      svg {
+        color: $color-third;
+        font-size: 17px;
+      }
+    }
+  }
+}
