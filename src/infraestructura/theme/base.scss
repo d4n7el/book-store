@@ -104,3 +104,10 @@ div.title-app {
     text-align: center;
   }
 }
+
+header.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  background-color: $color-first !important;
+  div.MuiBox-root {
+    justify-content: end;
+  }
+}

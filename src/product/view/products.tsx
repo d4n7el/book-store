@@ -28,7 +28,7 @@ const ProductsView = ({
   previous,
 }: IProps) => {
   return (
-    <div>
+    <div id="Products">
       <Title title="Products" className="center" />
       <ProductSearch setSearch={setSearch} search={search} />
       <div className="content-card-products">
