@@ -1,5 +1,3 @@
-import './style/index.scss';
-
 interface IProps {
   title: string;
   className: string;
