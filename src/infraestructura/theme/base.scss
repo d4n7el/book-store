@@ -8,3 +8,35 @@ div.skeleton {
     padding: 20px;
   }
 }
+
+div.input-app {
+  display: flex;
+  justify-content: end;
+  padding-right: 150px;
+  div.MuiInputBase-formControl {
+    border-radius: 40px;
+    padding-right: 21px !important;
+  }
+  .css-f6v4u4-MuiInputBase-root-MuiFilledInput-root:before,
+  .css-f6v4u4-MuiInputBase-root-MuiFilledInput-root:hover:not(.Mui-disabled):before {
+    border-bottom: none;
+  }
+
+  .css-f6v4u4-MuiInputBase-root-MuiFilledInput-root:after {
+    border-bottom: none;
+  }
+
+  .css-1gctnaj-MuiInputBase-input-MuiFilledInput-input {
+    padding-top: 11px;
+  }
+
+  button.MuiIconButton-edgeEnd {
+    background-color: $color-second;
+    margin-left: -10px;
+    padding: 4px;
+    svg {
+      font-size: 22px;
+      color: $color-third;
+    }
+  }
+}
