@@ -19,7 +19,7 @@ const InputApp = ({ item, formik, placeholder }: IProps) => {
           placeholder={placeholder}
           id="filled-adornment-password"
           type={'text'}
-          value={formik.values.name}
+          value={formik.values[item]}
           onChange={(e) => {
             formik.setFieldValue(item, e.target.value);
           }}
