@@ -1,17 +1,12 @@
 import { Dispatch, SetStateAction } from 'react';
 import { ProductDTO } from '../infraestructura/dto/productDTO';
 import Title from '../../infraestructura/components/title';
-import ProductCard from '../component/ProductCard';
+import ProductCard from '../component/productCard';
 import Fab from '@mui/material/Fab';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import FormControl from '@mui/material/FormControl';
-import FilledInput from '@mui/material/FilledInput';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
+import ProductSearch from '../component/productSearch';
+
 import '../style/products.scss';
-import Search from '@mui/icons-material/Search';
 
 interface IProps {
   products: ProductDTO[];
@@ -32,45 +27,10 @@ const ProductsView = ({
   next,
   previous,
 }: IProps) => {
-  const formik = useFormik({
-    initialValues: initialValues(search),
-    validationSchema: Yup.object(validationSchema()),
-    onSubmit: async (formData) => {
-      setSearch(formData.search);
-    },
-  });
-
   return (
     <div>
       <Title title="Products" />
-
-      <div className="input-app">
-        <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
-          <FilledInput
-            autoComplete="off"
-            id="filled-adornment-password"
-            type={'text'}
-            value={formik.values.search}
-            onChange={(e) => {
-              formik.setFieldValue('search', e.target.value);
-            }}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={() => {
-                    formik.handleSubmit();
-                  }}
-                  edge="end"
-                >
-                  <Search />
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
-      </div>
-
+      <ProductSearch setSearch={setSearch} search={search} />
       <div className="content-card-products">
         {products.map((product) => {
           return (
@@ -118,11 +78,3 @@ const ProductsView = ({
 };
 
 export default ProductsView;
-
-const initialValues = (search: string) => ({
-  search: search,
-});
-
-const validationSchema = () => ({
-  search: Yup.string().required(),
-});
