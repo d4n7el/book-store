@@ -4,6 +4,7 @@ import BlogView from './blog/infraestructura/view/blog';
 import './infraestructura/theme/base.scss';
 import ContactView from './contact/infraestructura/view/contact';
 import ResponsiveAppBar from './nav/infraestructura';
+import About from './about/infraestructura/view/about';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Products />
       <BlogView />
       <ContactView />
+      <About />
     </div>
   );
 }

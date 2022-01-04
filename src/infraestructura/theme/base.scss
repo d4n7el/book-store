@@ -99,9 +99,13 @@ div.content-modal-basic {
 div.title-app {
   h3 {
     font-size: 40px;
+    font-weight: 400;
   }
   h3.center {
     text-align: center;
+  }
+  h3.light {
+    color: $color-third;
   }
 }
 
