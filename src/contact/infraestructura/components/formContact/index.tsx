@@ -1,21 +1,34 @@
+import { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import FormControl from '@mui/material/FormControl';
-import FilledInput from '@mui/material/FilledInput';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import TextField from '@mui/material/TextField';
 import ButtonOval from '../../../../infraestructura/components/button';
-import ErrorIcon from '@mui/icons-material/Error';
 import InputApp from '../../../../infraestructura/components/input';
 import TextareaApp from '../../../../infraestructura/components/textarea';
+import BasicModal from '../../../../infraestructura/components/modal';
+import DetailInfoForm from '../detailInfoForm';
 
 const FormContact = () => {
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
-    onSubmit: async (formData) => {},
+    onSubmit: async (formData) => {
+      handleOpen();
+      setcontentModal(
+        <DetailInfoForm
+          name={formData.name}
+          email={formData.email}
+          phoneNumber={formData.phoneNumber}
+          message={formData.message}
+        />
+      );
+    },
   });
+
+  const [open, setOpen] = useState(false);
+  const [contentModal, setcontentModal] = useState<JSX.Element>(<></>);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <>
       <InputApp item="name" formik={formik} placeholder="Name" />
@@ -29,6 +42,12 @@ const FormContact = () => {
         onClick={() => {
           formik.handleSubmit();
         }}
+      />
+
+      <BasicModal
+        open={open}
+        handleClose={handleClose}
+        children={contentModal}
       />
     </>
   );

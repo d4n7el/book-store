@@ -32,7 +32,7 @@ const InputApp = ({ item, formik, placeholder }: IProps) => {
                 }}
                 edge="end"
               >
-                {formik.errors.name && <ErrorIcon />}
+                {formik.errors[item] && <ErrorIcon />}
               </IconButton>
             </InputAdornment>
           }
