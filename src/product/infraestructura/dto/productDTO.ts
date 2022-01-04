@@ -1,3 +1,10 @@
+export interface responseProducstDTO {
+  count: number;
+  next: string;
+  previous: string;
+  results: ProductDTO[];
+}
+
 export interface ProductDTO {
   id: number;
   title: string;
