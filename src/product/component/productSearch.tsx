@@ -58,5 +58,5 @@ const initialValues = (search: string) => ({
 });
 
 const validationSchema = () => ({
-  search: Yup.string().required(),
+  search: Yup.string(),
 });

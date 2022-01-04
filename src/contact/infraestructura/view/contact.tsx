@@ -5,7 +5,7 @@ import Title from '../../../infraestructura/components/title';
 
 const ContactView = () => {
   return (
-    <>
+    <div className="content-contact">
       <div className="container-contact" id="Contact">
         <div className="form-contact">
           <Title title="Contact Us" className="" />
@@ -20,7 +20,7 @@ const ContactView = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -4,7 +4,12 @@ div.container-blog {
   padding: 70px 12px;
   background-color: $color-third;
 
+  div.container-cards {
+    display: flex;
+    justify-content: center;
+  }
   div.content-cards {
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     div.MuiPaper-root {

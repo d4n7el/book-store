@@ -33,8 +33,8 @@ const ProductCard = ({
           component="div"
           className="name-book"
         >
-          <p className="name">{name.substring(0, 25)}</p>
-          <p className="value">{value}</p>
+          <p className="name">{name.substring(0, 23)}</p>
+          <p className="value">{`$${value}`}</p>
         </Typography>
         <Typography variant="body2" color="text.secondary" className="autor">
           {autor}

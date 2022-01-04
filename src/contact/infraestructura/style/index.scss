@@ -1,16 +1,21 @@
 @import '../../../infraestructura/theme/colors.scss';
 
-div.container-contact {
-  padding: 50px 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  div.image-contact {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 70%;
+div.content-contact {
+  display: flex;
+  justify-content: center;
+  div.container-contact {
+    width: 80%;
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    div.image-contact {
+      padding-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 70%;
+      }
     }
   }
 }
