@@ -8,7 +8,7 @@ import '../style/index.scss';
 const BlogView = () => {
   return (
     <div className="container-blog">
-      <Title title={'From Our Blog'} />
+      <Title title={'From Our Blog'} className="center" />
       <div className="container-cards">
         <div className="content-cards">
           <BlogCard

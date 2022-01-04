@@ -2,12 +2,13 @@ import './style/index.scss';
 
 interface IProps {
   title: string;
+  className: string;
 }
 
-const Title = ({ title }: IProps) => {
+const Title = ({ title, className }: IProps) => {
   return (
     <div className="title-app">
-      <h3>{title}</h3>
+      <h3 className={className}>{title}</h3>
     </div>
   );
 };

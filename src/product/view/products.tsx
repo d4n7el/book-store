@@ -29,7 +29,7 @@ const ProductsView = ({
 }: IProps) => {
   return (
     <div>
-      <Title title="Products" />
+      <Title title="Products" className="center" />
       <ProductSearch setSearch={setSearch} search={search} />
       <div className="content-card-products">
         {products.map((product) => {

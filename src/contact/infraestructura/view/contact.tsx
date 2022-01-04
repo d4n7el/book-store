@@ -1,22 +1,26 @@
 import '../style/index.scss';
 import imgContact from '../../../infraestructura/assets/contact-img.png';
 import FormContact from '../components/formContact';
+import Title from '../../../infraestructura/components/title';
 
 const ContactView = () => {
   return (
-    <div className="container-contact">
-      <div className="form-contact">
-        <FormContact />
+    <>
+      <div className="container-contact">
+        <div className="form-contact">
+          <Title title="Contact Us" className="" />
+          <FormContact />
+        </div>
+        <div className="image-contact">
+          <img
+            src={imgContact}
+            srcSet={imgContact}
+            alt={'header-img'}
+            loading="lazy"
+          />
+        </div>
       </div>
-      <div className="image-contact">
-        <img
-          src={imgContact}
-          srcSet={imgContact}
-          alt={'header-img'}
-          loading="lazy"
-        />
-      </div>
-    </div>
+    </>
   );
 };
 
