@@ -1,0 +1,35 @@
+@import '../../../infraestructura/theme/colors.scss';
+
+div.container-blog {
+  padding: 70px 12px;
+  background-color: $color-third;
+
+  div.content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    div.MuiPaper-root {
+      margin: 30px;
+      div.MuiCardContent-root {
+        position: relative;
+        padding-top: 30px;
+        button.button-title {
+          background-color: $color-first;
+          border-radius: 40px;
+          position: absolute;
+          top: -20px;
+          border: 2px solid white;
+          box-shadow: none;
+          padding: 5px 16px;
+        }
+        div.MuiTypography-h5 {
+          font-weight: 700;
+        }
+      }
+      div.MuiCardActions-root {
+        button {
+          color: $color-second;
+        }
+      }
+    }
+  }
+}
