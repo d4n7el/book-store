@@ -1,0 +1,93 @@
+@import '../../infraestructura/theme/colors.scss';
+
+div.content-card-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 4fr));
+  padding: 40px 120px;
+
+  div.MuiPaper-root {
+    margin: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    div.car-image {
+      background-color: $color-third;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      margin: 20px;
+      border-radius: 10px;
+
+      div.image-circle {
+        background-color: white;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      img {
+        width: 70px;
+        margin: auto;
+      }
+    }
+
+    div.name-book {
+      font-weight: bold;
+      font-size: 18px;
+      width: 100%;
+      display: block;
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin: 0px;
+      }
+      p.name {
+        color: $color-fourth;
+      }
+      p.value {
+        color: $color-second;
+      }
+    }
+
+    p.autor {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    div.content-languages {
+      padding: 10px;
+      div {
+        font-size: 12px;
+      }
+    }
+  }
+  &:hover {
+    div.arrow-slider-products {
+      .arrow-left {
+        opacity: 1;
+      }
+      .arrow-rigth {
+        opacity: 1;
+      }
+    }
+  }
+
+  div.arrow-slider-products {
+    .arrow-left,
+    .arrow-rigth {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      opacity: 0;
+      background-color: $color-second;
+    }
+    .arrow-left {
+      bottom: 10px;
+      left: 10px;
+    }
+    .arrow-rigth {
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+}
