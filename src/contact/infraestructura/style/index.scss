@@ -1,0 +1,15 @@
+@import '../../../infraestructura/theme/colors.scss';
+
+div.container-contact {
+  padding: 50px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  div.image-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 60%;
+    }
+  }
+}

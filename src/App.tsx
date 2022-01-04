@@ -2,6 +2,7 @@ import Header from './header/infraestructura';
 import Products from './product/container/products';
 import BlogView from './blog/infraestructura/view/blog';
 import './infraestructura/theme/base.scss';
+import ContactView from './contact/infraestructura/view/contact';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Products />
       <BlogView />
+      <ContactView />
     </div>
   );
 }
