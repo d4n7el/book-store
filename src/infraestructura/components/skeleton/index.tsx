@@ -2,7 +2,8 @@ import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 
 const SkeletonView = () => {
-  const data: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const data: number[] = [...Array(32)].map((_, i) => i);
+
   return (
     <div className="skeleton">
       {data.map((data) => {
