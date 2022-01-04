@@ -20,7 +20,6 @@ type IProps = {
 } & typeof defaultProps;
 
 const ButtonOval = ({ size, variant, style, txt, className }: IProps) => {
-  console.log(variant);
   return (
     <Button
       className={className}
