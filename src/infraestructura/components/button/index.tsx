@@ -7,8 +7,9 @@ const defaultProps = {
   size: 'small',
   variant: 'contained',
   style: {},
-  txt: '',
+  txt: 'txt button',
   className: '',
+  onClick: () => {},
 };
 
 type IProps = {
@@ -17,11 +18,20 @@ type IProps = {
   style: CSS.Properties;
   className: string;
   txt: string;
+  onClick: () => void;
 } & typeof defaultProps;
 
-const ButtonOval = ({ size, variant, style, txt, className }: IProps) => {
+const ButtonOval = ({
+  size,
+  variant,
+  style,
+  txt,
+  className,
+  onClick,
+}: IProps) => {
   return (
     <Button
+      onClick={onClick}
       className={className}
       style={style}
       size={(size = 'small' ? 'small' : size === 'medium' ? 'medium' : 'large')}

@@ -30,7 +30,11 @@ const BlogCard = ({ image, txtButton, title, msg, actions }: Iprops) => {
       </CardContent>
       <CardActions>
         {actions.map((action) => {
-          return <Button size="small">{action}</Button>;
+          return (
+            <Button key={action} size="small">
+              {action}
+            </Button>
+          );
         })}
       </CardActions>
     </Card>
