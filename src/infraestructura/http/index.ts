@@ -19,7 +19,7 @@ const get = async <T>(path: string, token: string): Promise<T> => {
     `${BASE_URL}${path}`,
     await getHeaders(token)
   );
-  return data.data.results as T;
+  return data.data as T;
 };
 
 export const http = {
