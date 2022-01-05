@@ -15,13 +15,13 @@ const About = () => {
       <div className="about-us">
         <Title title={'About Us'} className="light" />
         <div>
-          <p className="txt-about">
+          <p className="txt-about" data-testid="about">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Praesentium pariatur optio beatae sint nam. Fugiat saepe aspernatur,
             laudantium adipisci deleniti exceptur
           </p>
         </div>
-        <div className="container-social">
+        <div className="container-social" data-testid="social">
           <Avatar>
             <FacebookIcon />
           </Avatar>
@@ -36,7 +36,7 @@ const About = () => {
           </Avatar>
         </div>
       </div>
-      <div className="address">
+      <div className="address" data-testid="address">
         <Title title={'Address'} className="light" />
         <div className="container-address">
           <div className="icon">
