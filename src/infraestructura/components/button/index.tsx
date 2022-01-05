@@ -10,6 +10,7 @@ const defaultProps = {
   txt: 'txt button',
   className: '',
   onClick: () => {},
+  dataTestid: '',
 };
 
 type IProps = {
@@ -19,6 +20,7 @@ type IProps = {
   className: string;
   txt: string;
   onClick: () => void;
+  dataTestid: string;
 } & typeof defaultProps;
 
 const ButtonOval = ({
@@ -28,9 +30,11 @@ const ButtonOval = ({
   txt,
   className,
   onClick,
+  dataTestid,
 }: IProps) => {
   return (
     <Button
+      data-testid={dataTestid}
       onClick={onClick}
       className={className}
       style={style}

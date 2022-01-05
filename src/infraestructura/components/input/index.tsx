@@ -8,9 +8,10 @@ interface IProps {
   item: string;
   formik: any;
   placeholder: string;
+  dataTestid: string;
 }
 
-const InputApp = ({ item, formik, placeholder }: IProps) => {
+const InputApp = ({ item, formik, placeholder, dataTestid }: IProps) => {
   return (
     <div className="input-form">
       <FormControl sx={{ m: 1 }} variant="filled">
@@ -20,6 +21,7 @@ const InputApp = ({ item, formik, placeholder }: IProps) => {
           id="filled-adornment-password"
           type={'text'}
           value={formik.values[item]}
+          data-testid={dataTestid}
           onChange={(e) => {
             formik.setFieldValue(item, e.target.value);
           }}
@@ -32,7 +34,9 @@ const InputApp = ({ item, formik, placeholder }: IProps) => {
                 }}
                 edge="end"
               >
-                {formik.errors[item] && <ErrorIcon />}
+                {formik.errors[item] && (
+                  <ErrorIcon data-testid={`error-icon-${item}`} />
+                )}
               </IconButton>
             </InputAdornment>
           }

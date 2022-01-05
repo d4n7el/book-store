@@ -25,6 +25,7 @@ const BasicModal = ({ open, handleClose, children }: IProps) => {
     <div>
       <Modal
         open={open}
+        data-testid="modal-basic"
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

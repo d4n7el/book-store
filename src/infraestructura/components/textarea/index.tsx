@@ -4,11 +4,12 @@ interface IProps {
   item: string;
   formik: any;
   placeholder: string;
+  dataTestid: string;
 }
 
-const TextareaApp = ({ item, formik, placeholder }: IProps) => {
+const TextareaApp = ({ item, formik, placeholder, dataTestid }: IProps) => {
   return (
-    <div className="input-form-text-area">
+    <div className="input-form-text-area" data-testid={dataTestid}>
       <TextField
         fullWidth
         id="outlined-textarea"

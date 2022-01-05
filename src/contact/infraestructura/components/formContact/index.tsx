@@ -21,6 +21,7 @@ const FormContact = () => {
           message={formData.message}
         />
       );
+      formik.resetForm();
     },
   });
 
@@ -31,12 +32,33 @@ const FormContact = () => {
 
   return (
     <>
-      <InputApp item="name" formik={formik} placeholder="Name" />
-      <InputApp item="email" formik={formik} placeholder="Email" />
-      <InputApp item="phoneNumber" formik={formik} placeholder="Phone Number" />
-      <TextareaApp item="message" formik={formik} placeholder="Message" />
+      <InputApp
+        item="name"
+        formik={formik}
+        placeholder="Name"
+        dataTestid="form-name"
+      />
+      <InputApp
+        item="email"
+        formik={formik}
+        placeholder="Email"
+        dataTestid="form-email"
+      />
+      <InputApp
+        item="phoneNumber"
+        formik={formik}
+        placeholder="Phone Number"
+        dataTestid="form-phoneNumber"
+      />
+      <TextareaApp
+        item="message"
+        formik={formik}
+        placeholder="Message"
+        dataTestid="form-message"
+      />
 
       <ButtonOval
+        dataTestid="submit-form-contact"
         txt="SEND"
         className="button-widthfull-second"
         onClick={() => {
