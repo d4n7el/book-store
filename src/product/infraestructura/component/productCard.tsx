@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import imgBook from '../../infraestructura/assets/favicon.png';
+import imgBook from '../../../infraestructura/assets/favicon.png';
 
 interface IProps {
   name: string;
