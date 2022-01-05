@@ -20,7 +20,7 @@ const ProductCard = ({
   language = ['es'],
 }: IProps) => {
   return (
-    <Card>
+    <Card data-testid={`content-cards-products-${name}`}>
       <div className="car-image">
         <div className="image-circle">
           <img src={imgBook} alt="book" />

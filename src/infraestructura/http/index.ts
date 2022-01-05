@@ -17,6 +17,7 @@ const getHeaders = async (token: string) => {
 const get = async <T>(path: string, token: string): Promise<T> => {
   const data: AxiosResponse = await axios.get(
     `${BASE_URL}${path}`,
+
     await getHeaders(token)
   );
   return data.data as T;

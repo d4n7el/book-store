@@ -28,7 +28,7 @@ const ProductsView = ({
   previous,
 }: IProps) => {
   return (
-    <div id="Products">
+    <div id="Products" data-testid="list-products">
       <Title title="Products" className="center" />
       <ProductSearch setSearch={setSearch} search={search} />
       <div className="content-card-products">
@@ -48,6 +48,7 @@ const ProductsView = ({
         <div className="arrow-slider-products">
           {previous && (
             <Fab
+              data-testid="icon-arrow-left-products"
               color="secondary"
               className="arrow-left"
               aria-label="add"
@@ -61,6 +62,7 @@ const ProductsView = ({
 
           {next && (
             <Fab
+              data-testid="icon-arrow-rigth-products"
               color="secondary"
               className="arrow-rigth"
               aria-label="add"
