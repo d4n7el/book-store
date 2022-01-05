@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction } from 'react';
-import { ProductDTO } from '../infraestructura/dto/productDTO';
-import Title from '../../infraestructura/components/title';
-import ProductCard from '../component/productCard';
+import { ProductDTO } from '../dto/productDTO';
+import Title from '../../../infraestructura/components/title';
+import ProductCard from '../../component/productCard';
 import Fab from '@mui/material/Fab';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
-import ProductSearch from '../component/productSearch';
+import ProductSearch from '../../component/productSearch';
 
 import '../style/products.scss';
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ProductDTO } from '../infraestructura/dto/productDTO';
 import { getProductsService } from '../domain/product.service';
-import ProductsView from '../view/products';
+import ProductsView from '../infraestructura/view/products';
 import SkeletonView from '../../infraestructura/components/skeleton';
 
 const Products = () => {
